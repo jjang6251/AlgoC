@@ -24,17 +24,10 @@ void BFS(int y, int x)
             if (adj[ny][nx] == 1 && visited[ny][nx] == 0)
             {
                 visited[ny][nx] = visited[y][x] + 1;
-                q.push({ny, nx});
             }
         }
     }
     cout << "최단 거리: " <<visited[dk_y][dk_x] << '\n';
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < m; j++) {
-            cout << visited[i][j] << ' ';
-        }
-        cout << '\n';
-    }
 }
 
 int main()
@@ -50,10 +43,10 @@ int main()
     {
         for (int j = 0; j < m; j++)
         {
-            cin >> adj[i][j];
+            cin >> adj[n][m];
         }
     }
 
-    BFS(sw_y , sw_x);
+    BFS(0 , 0);
     return 0;
 }
