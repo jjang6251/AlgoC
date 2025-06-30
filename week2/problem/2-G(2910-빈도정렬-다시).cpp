@@ -3,13 +3,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, c, a[1004];
+int n, c;
 map<int, int> order, cnt;
 vector<pair<int, int>> v;
 
 bool cmp(pair<int, int> a, pair<int, int>b) {
     if(a.second == b.second) {
-        return order[a.first] < order[b.first]; //오름차순
+        return order[a.first] < b.first; //오름차순
     }
     return a.second > b.second; //내림차순
 }
@@ -23,10 +23,10 @@ int main()
 
     for(int i = 0; i < n; i++) {
         int num;
-        cin>> num;
+        cin  >> num;
 
         cnt[num]++;
-        if(order[num] == 0) order[num] = i+1;
+        if(order[num] == 0) order[num] = i;
     }
 
     for(auto p : cnt) {
