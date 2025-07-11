@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int r, c , ret, mn = 987654;
+int r, c , ret, mn = 987654321;
 char a[1004][1004];
 char temp[1004][1004];
 int visited[1004][1004];
@@ -34,8 +34,10 @@ bool Fire() {
 }
 
 void DFS(int y, int x) {
-    if(y < 0 || x < 0 || y >= r || x >= c) {
-        
+    if(y == c || x == r) {
+        ret++;
+        mn = min(ret, mn);
+        return;
     }
     visited[y][x] = 1;
     for(int i = 0; i < 4; i++) {
@@ -63,8 +65,6 @@ int main() {
 
     int x, y;
 
-    cin >> r >> c;
-
     for(int i = 0; i < r; i++) {
         for(int j = 0; j < c; j++) {
             cin >> a[i][j];
@@ -74,7 +74,7 @@ int main() {
 
     DFS(y, x);
     
-    if(mn == 987654) {
+    if(mn == 987654321) {
         cout << "IMPOSSIBLE";
     } else {
         cout << mn;
