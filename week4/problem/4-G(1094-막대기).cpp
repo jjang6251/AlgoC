@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int ret = 1;
+int ret;
 
 int main() {
     cin.tie(NULL);
