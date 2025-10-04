@@ -11,5 +11,6 @@ int main() {
     }
     if(!ret.size())cout << "FRULA" << "\n";
     else cout << ret << "\n";
+    
     return 0;
 }
