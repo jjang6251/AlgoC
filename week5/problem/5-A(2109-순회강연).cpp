@@ -19,4 +19,5 @@ int main(){
     	ret += pq.top(); pq.pop();
 	}
     cout << ret << "\n";
+    
 }
