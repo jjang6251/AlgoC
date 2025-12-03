@@ -17,7 +17,8 @@ int main() {
 		ret += v[i].second; 
 		pq.push(v[i].second); 
 		if(pq.size() > v[i].first){
-			ret -= pq.top();  
+			ret -= pq.top();
+			
 			pq.pop(); 
 		}
 	}
