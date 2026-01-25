@@ -63,7 +63,7 @@ static vector<vector<int>> moveBoard(const vector<vector<int>>& b, int dir) {
             vector<int> col(n);
             for (int r = 0; r < n; r++) col[r] = b[r][c];
             reverse(col.begin(), col.end());
-            col = compressMergeLeft(col);
+            col = compressMergeLeft(col); 
             reverse(col.begin(), col.end());
             for (int r = 0; r < n; r++) nb[r][c] = col[r];
         }
