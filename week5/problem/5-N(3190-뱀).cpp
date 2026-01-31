@@ -39,7 +39,7 @@ int main(){
         visited[ny][nx] = 1;  
         dq.push_front({ny, nx}); 
         if(time == _time[idx].first){
-            dir = (dir + _time[idx].second) % 4; 
+            dir = (dir + _time[idx].second) % 4;  
             idx++; 
         }    
     }
