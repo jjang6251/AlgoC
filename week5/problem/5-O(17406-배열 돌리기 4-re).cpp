@@ -48,7 +48,7 @@ int solve(){
 	int mn = INF;
 	for(int i = 0; i < n; i++){
 		int cnt = 0;
-		for(int j = 0; j < m; j++)cnt += b[i][j];
+		for(int j = 0; j < m; j++)cnt += b[i][j]; 
 		mn = min(mn, cnt);
 	}
 	return mn; 
