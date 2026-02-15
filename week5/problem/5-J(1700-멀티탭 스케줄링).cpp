@@ -23,7 +23,7 @@ int main() {
                     }
                     if(last_idx < here_pick) {
                         last_idx = here_pick;
-                        pos = _a;
+                        pos = _a; 
                     }
                 }
                 visited[pos] = 0;
